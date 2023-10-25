@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-h+d*7thpqsawl&_pl12rxoiyk)-=33so19i7x(0+vevc_y9im%
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["8000-johannhelbert-study-soci-3uiy34wx4m.us2.codeanyapp.com"]
+ALLOWED_HOSTS = ["8000-johannhelbe-studysocial-qsfi7eiilns.ws-eu105.gitpod.io"]
 
 
 # Application definition
@@ -127,4 +127,4 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://8000-johannhelbert-study-soci-3uiy34wx4m.us2.codeanyapp.com']
+    'https://8000-johannhelbe-studysocial-qsfi7eiilns.ws-eu105.gitpod.io']
