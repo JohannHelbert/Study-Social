@@ -34,9 +34,13 @@ def loginPage(request):
         else:
             messages.error(request, 'Username OR password does not exist')
 
-
     context = {}
     return render(request, 'base/login_register.html', context)
+
+
+def logoutUser(request):
+    logout(request)
+    return redirect('home')
 
 
 def home(request):
