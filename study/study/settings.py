@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-h+d*7thpqsawl&_pl12rxoiyk)-=33so19i7x(0+vevc_y9im%
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["8000-johannhelbe-studysocial-pjgrr6g7zje.ws-eu105.gitpod.io"]
+ALLOWED_HOSTS = ["8000-johannhelbe-studysocial-wiy35e8h5w7.ws-eu105.gitpod.io"]
 
 
 # Application definition
@@ -120,6 +120,12 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
+STATICFILES_DIRS = [
+    BASE_DIR / 'static'
+]
+
+# STATIC_ROOT = 
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
@@ -127,4 +133,4 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://8000-johannhelbe-studysocial-pjgrr6g7zje.ws-eu105.gitpod.io']
+    'https://8000-johannhelbe-studysocial-wiy35e8h5w7.ws-eu105.gitpod.io']
