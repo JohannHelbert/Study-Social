@@ -29,7 +29,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-johannhelbe-studysocial-ot49e2c36hd.ws-eu105.gitpod.io']
+ALLOWED_HOSTS = ['']
 
 
 # Application definition
@@ -144,4 +144,4 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://8000-johannhelbe-studysocial-ot49e2c36hd.ws-eu105.gitpod.io']
+    '']
