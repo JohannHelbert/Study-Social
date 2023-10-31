@@ -12,7 +12,6 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 
 from pathlib import Path
 import os
-import dj_database_url
 if os.path.isfile('env.py'):
     import env
 
@@ -30,7 +29,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-johannhelbe-studysocial-yxmyb0ltwoy.ws-eu105.gitpod.io']
+ALLOWED_HOSTS = ['8000-johannhelbe-studysocial-ot49e2c36hd.ws-eu105.gitpod.io']
 
 
 # Application definition
@@ -41,12 +40,9 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    'cloudinary_storage',
     'django.contrib.staticfiles',
-    'cloudinary',
     'base.apps.BaseConfig',
     'rest_framework',
-
 ]
 
 AUTH_USER_MODEL = 'base.User'
@@ -87,16 +83,13 @@ WSGI_APPLICATION = 'study.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-# DATABASES = {
-#    'default': {
-#        'ENGINE': 'django.db.backends.sqlite3',
-#        'NAME': BASE_DIR / 'db.sqlite3',
-#    }
-# }
-
 DATABASES = {
-    'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
 }
+
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
@@ -151,4 +144,4 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://8000-johannhelbe-studysocial-yxmyb0ltwoy.ws-eu105.gitpod.io']
+    'https://8000-johannhelbe-studysocial-ot49e2c36hd.ws-eu105.gitpod.io']
