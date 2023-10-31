@@ -24,12 +24,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get('SECRET_KEY')
+SECRET_KEY = 'django-insecure-h+d*7thpqsawl&_pl12rxoiyk)-=33so19i7x(0+vevc_y9im%'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['']
+ALLOWED_HOSTS = ['8000-johannhelbe-studysocial-ot49e2c36hd.ws-eu105.gitpod.io']
 
 
 # Application definition
@@ -144,4 +144,4 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 CSRF_TRUSTED_ORIGINS = [
-    '']
+    'https://8000-johannhelbe-studysocial-ot49e2c36hd.ws-eu105.gitpod.io']
