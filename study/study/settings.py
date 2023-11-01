@@ -23,9 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-3#av2c6nptlbbb6^muqkchu&fe3wv&n$t2+g$v!ir-f5%doocb'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['8000-johannhelbe-studysocial-xwvyflfpbzf.ws-eu105.gitpod.io']
+ALLOWED_HOSTS = ['8000-johannhelbe-studysocial-jlmon58dj9r.ws-eu105.gitpod.io']
 
 
 # Application definition
@@ -37,20 +37,14 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-
     'base.apps.BaseConfig',
-
     'rest_framework',
-    "corsheaders",
 ]
 
 AUTH_USER_MODEL = 'base.User'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-
-    "corsheaders.middleware.CorsMiddleware",
-
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -146,8 +140,7 @@ MEDIA_ROOT = BASE_DIR / 'static/images'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
-CORS_ALLOW_ALL_ORIGINS = True
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://8000-johannhelbe-studysocial-xwvyflfpbzf.ws-eu105.gitpod.io'
+    'https://8000-johannhelbe-studysocial-jlmon58dj9r.ws-eu105.gitpod.io'
 ]
