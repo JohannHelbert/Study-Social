@@ -33,9 +33,9 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['studysocial-d2980b089c78.herokuapp.com', 'localhost']
+ALLOWED_HOSTS = ['study-social-8e0c28744b94.herokuapp.com/', 'localhost']
 
-CSRF_TRUSTED_ORIGINS = ['https://studysocial-d2980b089c78.herokuapp.com/']
+CSRF_TRUSTED_ORIGINS = ['https://study-social-8e0c28744b94.herokuapp.com/']
 
 
 # Application definition
