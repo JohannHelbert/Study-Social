@@ -32,9 +32,9 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['8000-johannhelbe-studysocial-mq4868nrqdg.ws-eu105.gitpod.io', 'localhost']
+ALLOWED_HOSTS = ['studysocial-d2980b089c78.herokuapp.com', 'localhost' '8000-johannhelbe-studysocial-mq4868nrqdg.ws-eu105.gitpod.io']
 
-CSRF_TRUSTED_ORIGINS = ['https://8000-johannhelbe-studysocial-mq4868nrqdg.ws-eu105.gitpod.io']
+CSRF_TRUSTED_ORIGINS = ['https://8000-johannhelbe-studysocial-mq4868nrqdg.ws-eu105.gitpod.io', 'https://studysocial-d2980b089c78.herokuapp.com/']
 
 
 # Application definition
