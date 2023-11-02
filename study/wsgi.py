@@ -13,6 +13,6 @@ path = '/'
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'Study.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'study.settings')
 
 application = get_wsgi_application()
