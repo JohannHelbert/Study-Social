@@ -32,9 +32,9 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['studysocial-d2980b089c78.herokuapp.com', 'localhost' '8000-johannhelbe-studysocial-mq4868nrqdg.ws-eu105.gitpod.io']
+ALLOWED_HOSTS = ['studysocial-d2980b089c78.herokuapp.com', 'localhost', '8000-johannhelbe-studysocial-mq4868nrqdg.ws-eu105.gitpod.io']
 
-CSRF_TRUSTED_ORIGINS = ['https://8000-johannhelbe-studysocial-mq4868nrqdg.ws-eu105.gitpod.io', 'https://studysocial-d2980b089c78.herokuapp.com/']
+CSRF_TRUSTED_ORIGINS = ['8000-johannhelbe-studysocial-mq4868nrqdg.ws-eu105.gitpod.io', 'localhost' 'https://studysocial-d2980b089c78.herokuapp.com/']
 
 
 # Application definition
@@ -53,6 +53,7 @@ INSTALLED_APPS = [
 AUTH_USER_MODEL = 'base.User'
 
 MIDDLEWARE = [
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -60,7 +61,6 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'study.urls'
@@ -140,12 +140,12 @@ USE_TZ = True
 
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
-MEDIA_URL = '/static/images/'
+MEDIA_URL = '/media/'
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'study/study/static')
+    os.path.join(BASE_DIR, 'static')
 ]
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'static/images')
