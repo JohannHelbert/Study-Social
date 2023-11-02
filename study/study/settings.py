@@ -48,9 +48,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'base.apps.BaseConfig',
     'rest_framework',
-    'study',
-    'dj_database_url',
-    'whitenoise'
 ]
 
 AUTH_USER_MODEL = 'base.User'
