@@ -20,6 +20,7 @@ if os.path.isfile('env.py'):
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 
 
 
@@ -32,9 +33,9 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['studysocial-d2980b089c78.herokuapp.com', 'localhost', '8000-johannhelbe-studysocial-mq4868nrqdg.ws-eu105.gitpod.io']
+ALLOWED_HOSTS = ['studysocial-d2980b089c78.herokuapp.com', 'localhost']
 
-CSRF_TRUSTED_ORIGINS = ['8000-johannhelbe-studysocial-mq4868nrqdg.ws-eu105.gitpod.io', 'localhost' 'https://studysocial-d2980b089c78.herokuapp.com/']
+CSRF_TRUSTED_ORIGINS = ['https://studysocial-d2980b089c78.herokuapp.com/']
 
 
 # Application definition
@@ -45,9 +46,12 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
+    'cloudinary_storage',
     'django.contrib.staticfiles',
+    'cloudinary',
     'base.apps.BaseConfig',
     'rest_framework',
+    'base',
 ]
 
 AUTH_USER_MODEL = 'base.User'
@@ -69,7 +73,7 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
-            BASE_DIR / 'templates'
+            TEMPLATES_DIR
         ],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -139,16 +143,13 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATIC_URL = '/static/'
+STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
+STATIC_DIRS = [os.path.join(BASE_DIR, 'static')]
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
 MEDIA_URL = '/media/'
-
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'study/static')
-]
-
-MEDIA_ROOT = os.path.join(BASE_DIR, 'static/images')
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 # STATIC_ROOT =
 
