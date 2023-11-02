@@ -1,1 +1,1 @@
-web: gunicorn study.wsgi:application
+web: gunicorn study.wsgi
