@@ -51,7 +51,6 @@ INSTALLED_APPS = [
     'cloudinary',
     'base.apps.BaseConfig',
     'rest_framework',
-    'base',
 ]
 
 AUTH_USER_MODEL = 'base.User'
