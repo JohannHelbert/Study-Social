@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'study',
     'dj_database_url',
+    'whitenoise'
 ]
 
 AUTH_USER_MODEL = 'base.User'
