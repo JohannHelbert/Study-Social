@@ -51,13 +51,11 @@ INSTALLED_APPS = [
     'cloudinary',
     'base',
     'rest_framework',
-    'whitenoise'
 ]
 
 AUTH_USER_MODEL = 'base.User'
 
 MIDDLEWARE = [
-    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
