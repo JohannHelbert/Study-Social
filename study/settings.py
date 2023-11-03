@@ -51,6 +51,7 @@ INSTALLED_APPS = [
     'cloudinary',
     'base',
     'rest_framework',
+    'whitenoise'
 ]
 
 AUTH_USER_MODEL = 'base.User'
@@ -100,7 +101,7 @@ WSGI_APPLICATION = 'study.wsgi.application'
 #}
 
 DATABASES = {
-     'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
+     'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
  }
 
 
