@@ -1,6 +1,4 @@
-{% extends 'main.html' %}
-{% load static %}
-{% block content %}
+{% extends 'main.html' %} {% block content %}
 <main class="profile-page layout layout--2">
   <div class="container">
     <!-- Room Start -->
@@ -83,11 +81,7 @@
               class="room__author"
             >
               <div class="avatar avatar--small">
-                {% if room.host.avatar %}
                 <img src="{{room.host.avatar.url}}" />
-                {% else %}
-                <img src="{{static 'images/avatar.svg'}}" />
-                {% endif %}
               </div>
               <span>@{{room.host.username}}</span>
             </a>
