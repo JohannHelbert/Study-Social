@@ -31,7 +31,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['study-social-8e0c28744b94.herokuapp.com', 'localhost']
+ALLOWED_HOSTS = ['study-social-8e0c28744b94.herokuapp.com', 'localhost', '8000-johannhelbe-studysocial-4epkrxwi6g9.ws-eu105.gitpod.io']
 
 X_FRAME_OPTIONS = 'SAMEORIGIN'
 
@@ -130,7 +130,7 @@ USE_I18N = True
 
 USE_L10N = True
 
-USE_TZ = True
+USE_TZ = False
 
 
 # Static files (CSS, JavaScript, Images)
@@ -143,6 +143,7 @@ STATIC_URL = '/static/'
 STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'), ]
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
 
 
 # Default primary key field type
