@@ -29,9 +29,9 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = 'DEBUG' in os.environ
 
-ALLOWED_HOSTS = ['study-social-8e0c28744b94.herokuapp.com', 'localhost', '8000-johannhelbe-studysocial-3ov75r4zavg.ws-eu105.gitpod.io']
+ALLOWED_HOSTS = ['study-social-8e0c28744b94.herokuapp.com', 'localhost', '8000-johannhelbe-studysocial-5d3jfdc426j.ws-eu106.gitpod.io']
 
 X_FRAME_OPTIONS = 'SAMEORIGIN'
 
@@ -95,8 +95,8 @@ WSGI_APPLICATION = 'study.wsgi.application'
 # }
 
 DATABASES = {
-    'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
-}
+     'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
+ }
 
 
 

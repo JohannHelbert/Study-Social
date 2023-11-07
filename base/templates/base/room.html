@@ -1,6 +1,4 @@
-{% extends 'main.html' %} 
-{% load static %}
-{% block content %}
+{% extends 'main.html' %} {% block content %}
 <main class="profile-page layout layout--2">
   <div class="container">
     <!-- Room Start -->
@@ -83,18 +81,22 @@
               class="room__author"
             >
               <div class="avatar avatar--small">
-                <img src="{% static 'images/avatar.png' %}" />
+                <img src="{{room.host.avatar.url}}" />
               </div>
               <span>@{{room.host.username}}</span>
             </a>
           </div>
-
+          <div class="room__details">
+            <p>
+              {{room.description}}
+            </p>
+          </div>
           <span class="room__topics">{{room.topic}}</span>
         </div>
+
         <div class="room__conversation">
           <div class="threads scroll">
             {% for message in room_messages %}
-
             <div class="thread">
               <div class="thread__top">
                 <div class="thread__author">
@@ -111,6 +113,7 @@
                     >{{message.created|timesince}} ago</span
                   >
                 </div>
+
                 {% if request.user == message.user %}
                 <a href="{% url 'delete-message' message.id %}">
                   <div class="thread__delete">
@@ -152,13 +155,12 @@
       </h3>
       <div class="participants__list scroll">
         {% for user in participants %}
-
-        <a href="{% url 'user-profile' user.id %}" class="participant">
+        <a href="{%  url 'user-profile' user.id %}" class="participant">
           <div class="avatar avatar--medium">
             <img src="{{user.avatar.url}}" />
           </div>
           <p>
-            {{user.username}}
+            {{user.name}}
             <span>@{{user.username}}</span>
           </p>
         </a>
