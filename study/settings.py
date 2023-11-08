@@ -31,7 +31,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = 'DEBUG' in os.environ
 
-ALLOWED_HOSTS = ['study-social-8e0c28744b94.herokuapp.com', 'localhost', '8000-johannhelbe-studysocial-okunqqn3hyr.ws-eu106.gitpod.io']
+ALLOWED_HOSTS = ['study-social-8e0c28744b94.herokuapp.com', 'localhost', '8000-johannhelbe-studysocial-y384ksobdfw.ws-eu106.gitpod.io']
 
 X_FRAME_OPTIONS = 'SAMEORIGIN'
 
