@@ -10,49 +10,6 @@ This project was created as my fourth milestone project for my Level 5 Diploma i
 
 ---
 
-## Contents
-
-* [User Experience](#user-experience)
-  * [Strategy Plane](#strategy-plane)
-    * [Project Goals](#project-goals)
-  * [Scope Plane](#scope-plane)
-    * [Feature Planning](#feature-planning)
-  * [Structure Plane](#structure-plane)
-    * [User Stories](#user-stories)
-    * [Database Schema](#database-schema)
-  * [Skeleton Plane](#skeleton-plane)
-    * [Wireframes](#wireframes)
-  * [Surface Plane](#surface-plane)
-    * [Colour Scheme](#colour-scheme)
-    * [Typography](#typography)
-    * [Imagery](#imagery)
-    * [Base Mockup](#base-mockup)
-* [Features](#features)
-  * [General Features of The Site](#general-features-of-of-the-site)
-  * [Future Implementations](#future-implementations)
-  * [Accessibility](#accessibility)
-* [Technologies Used](#technologies-used)
-  * [Languages Used](#languages-used)
-  * [Database Used](#database-used)
-  * [Frameworks Used](#frameworks-used)
-  * [Libraries & Packages Used](#libraries--packages-used)
-  * [Programs Used](#programs-used)
-  * [Stripe](#stripe)
-* [Deployment & Local Development](#deployment--local-development)
-  * [Deployment](#deployment)
-  * [### Migrating to Railway.app for deployment](#migrating-to-railwayapp-for-deployment)
-  * [Local Development](#local-development)
-    * [How to Fork](#how-to-fork)
-    * [How to Clone](#how-to-clone)
-* [Testing](#testing)
-* [Credits](#credits)
-  * [Code Used](#code-used)
-  * [Content](#content)
-  * [Media](#media)
-  * [Acknowledgments](#acknowledgments)
-
----
-
 ## User Experience
 
 ### Strategy Plane
@@ -401,7 +358,67 @@ pip3 install -r requirements.txt
 
 ## Testing
 
+## Validation Testing
 
+### HTML
+
+<img src="assets/images/html w3c testing.png">
+
+[W3C](https://validator.w3.org/) was used to validate the HTML.
+
+### JavaScript
+
+[JS Hint](https://jshint.com/) was used to validate the JavaScript.
+
+<img src="assets/images/javascript testing jshint.png">
+
+## Manual Testing
+
+### Testing User Stories
+
+| User Story ID | As a/an | I want to be able to ... | So that I can... | How is this achieved? | Evidence |
+| :--- | :--- | :--- | :---| :--- | :---: |
+| **VIEWING & NAVIGATION** |
+| 1 | Site-User | view a paginated list of posts | easily select a post to view | Pass |
+| 2 | Site-User | view a list of posts | I can select one to read | Pass |
+| 3 | Site-User /Admin | view comments on an individual post | I can read the conversation | Pass |
+| 4 | Site-User | view activities | I can view my activity and other activities in my room  | Pass |
+| **REGISTRATION & USER ACCOUNTS** |
+| 5 | Site-User | Register for an account | I can comment and read the posts | Pass |
+| 6 | Site-User | update my profile | I can add a new picture and bio | Pass |
+| 7 | Site-User | Log in and out | Keep my account information secure | Pass |
+| **SEARCHING** |
+| 8 | Site-User | search topics | I can find interested topics | Pass |
+| **Room & Topics** |
+| 9 | Site-User | edit my room | I can update description, name and topic | Pass |
+| 10 | Site-User | create new room topics | i can have unique rooms | Pass |
+| 11 | Site-User | create a room | I have a own room for conversation | Pass |
+| 12 | Site-User | click on a post | I can read the full text | Pass |
+| 13 | Site-User | leave comments on a post | I can be involved in the conversation | Pass |
+| 14 | Site-User | create, read, update and delete posts | I can manage my blog content | Pass |
+| **ADMIN** |
+| 15 | Admin | edit a user | I can update profile information | Pass |
+| 16 | Admin | delete user | I can hold my Site clear and safe | Pass |
+### Full Testing
+
+Full testing was performed on the following devices:
+
+* Mobile:
+  * iPhone 13 Pro
+  * iPhone 14
+  * iPhone 11 Pro
+* Tablet:
+  * iPad Air 2
+* Laptop:
+  * Macbook Pro 2021 14 inch Screen
+* Desktop
+  * 34 inch ultrawide Monitor
+
+Testing was also performed using the following browsers:
+
+* Chrome
+* FireFox
+* Safari
 
 ---
 
@@ -409,25 +426,11 @@ pip3 install -r requirements.txt
 
 ### Code Used
 
-This project was created using methods taught in the Code Institutes walkthrough project for Boutique Ado.
-
-The code to create the image zoom on the products page was taken from [Thdoan Magnify JS](https://thdoan.github.io/magnify/)
-
-### Content
-
-Content for the site was written by Kera Cudmore, save for product descriptions, which were adapted from the product descriptions on the Groves website.
+This project was created using methods taught in the Code Institutes walkthrough project.
+I used this youtube video tutorial to create this site > https://www.youtube.com/watch?v=PtQiiknWUcI&t=18679s
 
 ### Media
 
-* [Groves & Banks Ltd](https://www.grovesltd.co.uk/) - For allowing me [permission](documentation/readme/groves-permission.png) to use any of the images of their products from their website.
-
-* [Noimage](https://www.canva.com/search/templates?q=lighthouse) - Created for free on Canva, utilising their design elements (Elegant minimalistic logo with lighthouse for seafood cafe) in the colour theme of my site.
+* I used a standard avatar profil image from google.
 
 ### Acknowledgments
-
-I would like to acknowledge the following people who have helped me with completing this project:
-
-* My family for their patience and support whilst working on my final project.
-* My Code Institute mentor [Adegbenga Adeye](https://github.com/deye9).
-* Nerd Alert for their constant support and encouragement while completing this project.
-* The Code Institute Tutors who assisted me with troubleshooting when I was stuck on a particularly difficult bug.
