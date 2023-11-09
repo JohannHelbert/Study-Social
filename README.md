@@ -366,6 +366,13 @@ pip3 install -r requirements.txt
 
 [W3C](https://validator.w3.org/) was used to validate the HTML.
 
+
+### CSS
+
+<img src="assets/images/CSS Test.png">
+
+[W3C](https://jigsaw.w3.org/css-validator/) was used to validate the CSS
+
 ### JavaScript
 
 [JS Hint](https://jshint.com/) was used to validate the JavaScript.
